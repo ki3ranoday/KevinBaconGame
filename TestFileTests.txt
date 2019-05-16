@@ -1,0 +1,74 @@
+Commands:
+c <#>:          list top (positive number) or bottom (negative) <#> centers of the universe, sorted by average separation
+d <low> <high>: list actors sorted by degree, with degree between low and high
+i:              list actors with infinite separation from the current center
+p <name>:       find path from <name> to current center of the universe
+s <low> <high>: list actors sorted by non-infinite separation from the current center, with separation between low and high
+u <name>:       make <name> the center of the universe
+q:              quit game
+h:              help
+Kevin Bacon is now the center of the universe, average separation 1.75, connected to 5/7 actors
+Graph:
+Vertices: [Bob, Alice, Charlie, Nobody, Nobody's Friend, Kevin Bacon, Dartmouth (Earl thereof)]
+Out edges: {Bob={Alice=[A movie], Charlie=[C movie], Kevin Bacon=[A movie]}, Alice={Bob=[A movie], Charlie=[D movie], Kevin Bacon=[A movie, E movie]}, Charlie={Bob=[C movie], Alice=[D movie], Dartmouth (Earl thereof)=[B movie]}, Nobody={Nobody's Friend=[F movie]}, Nobody's Friend={Nobody=[F movie]}, Kevin Bacon={Bob=[A movie], Alice=[A movie, E movie]}, Dartmouth (Earl thereof)={Charlie=[B movie]}}
+c 4
+Bob's average seperation is 1.25
+Alice's average seperation is 1.25
+Charlie's average seperation is 1.25
+Kevin Bacon's average seperation is 1.75
+c -4
+Dartmouth (Earl thereof)'s average seperation is 2.0
+Kevin Bacon's average seperation is 1.75
+Alice's average seperation is 1.25
+Charlie's average seperation is 1.25
+d 0 10
+Bob has degree 3
+Alice has degree 3
+Charlie has degree 3
+Kevin Bacon has degree 2
+Nobody has degree 1
+Nobody's Friend has degree 1
+Dartmouth (Earl thereof) has degree 1
+d 3 4
+Bob has degree 3
+Charlie has degree 3
+Alice has degree 3
+i
+No path from Kevin Bacon to: 
+  Nobody
+  Nobody's Friend
+p Charlie
+Charlie's number is 2
+Charlie was in [C movie] with Bob
+Bob was in [A movie] with Kevin Bacon
+p Alice
+Alice's number is 1
+Alice was in [A movie, E movie] with Kevin Bacon
+p Dartmouth (Earl thereof)
+Dartmouth (Earl thereof)'s number is 3
+Dartmouth (Earl thereof) was in [B movie] with Charlie
+Charlie was in [C movie] with Bob
+Bob was in [A movie] with Kevin Bacon
+s 1 2
+Charlie is 2 away from Kevin Bacon
+Bob is 1 away from Kevin Bacon
+Alice is 1 away from Kevin Bacon
+u Alice
+Alice is now the center of the universe, average separation 1.25, connected to 5/7 actors
+p Kevin Bacon
+Kevin Bacon's number is 1
+Kevin Bacon was in [A movie, E movie] with Alice
+p Nobody
+No path to Nobody
+h
+Commands:
+c <#>:          list top (positive number) or bottom (negative) <#> centers of the universe, sorted by average separation
+d <low> <high>: list actors sorted by degree, with degree between low and high
+i:              list actors with infinite separation from the current center
+p <name>:       find path from <name> to current center of the universe
+s <low> <high>: list actors sorted by non-infinite separation from the current center, with separation between low and high
+u <name>:       make <name> the center of the universe
+q:              quit game
+h:              help
+q
+Bye Bye see you again soon
